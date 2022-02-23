@@ -1,0 +1,15 @@
+body {
+    background-color: $color-back;
+    box-sizing: border-box;
+    color: $color-fore;
+}
+
+/* MOBILE LAYOUT */
+
+@include respond('medium') {
+  /* MEDIUM SCREEN LAYOUT */
+}
+
+@include respond('large') {
+  /* LARGE SCREEN LAYOUT */
+}
