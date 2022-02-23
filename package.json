@@ -1,0 +1,52 @@
+{
+  "name": "eleventy-static-starter",
+  "version": "1.0.0",
+  "description": "11ty + Rollup + PostCSS, with hash manifest & sitemap - no image optimisation",
+  "main": ".eleventy.js",
+  "scripts": {
+    "html:dev": "ELEVENTY_ENV=dev set DEBUG=Eleventy* & npx @11ty/eleventy --serve",
+    "html:prd": "ELEVENTY_ENV=production NODE_ENV=production npx @11ty/eleventy",
+    "css:dev": "npx postcss ./src/scss/style.scss --output ./_site/css/style.css --env development --verbose --watch",
+    "css:prd": "npx postcss ./src/scss/style.scss --output ./_site/css/style.css --env production",
+    "js:dev": "npx rollup --config --watch",
+    "js:prd": "NODE_ENV=production npx rollup --config",
+    "build": "NODE_ENV=production npm-run-all --serial css:prd js:prd html:prd",
+    "start": "NODE_ENV=develop run-p html:dev js:dev css:dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "welt",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@netlify/plugin-sitemap": "^0.8.1",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.6",
+    "postcss-cli": "^9.1.0",
+    "postcss-scss": "^4.0.3",
+    "rollup": "^2.68.0",
+    "rollup-plugin-output-manifest": "^2.0.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "dependencies": {
+    "@quasibit/eleventy-plugin-sitemap": "^2.1.5",
+    "autoprefixer": "^10.4.2",
+    "cssnano": "^5.0.17",
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-assets": "^6.0.0",
+    "postcss-color-function": "^4.1.0",
+    "postcss-hash": "^3.0.0",
+    "postcss-map-get": "^0.3.0",
+    "postcss-nested": "^5.0.6",
+    "postcss-sort-media-queries": "^4.2.1"
+  }
+}
