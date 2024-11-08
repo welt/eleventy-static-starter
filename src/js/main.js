@@ -1,5 +1,6 @@
-import * as a from './_modules/a';
-import * as b from './_modules/b';
+import * as messages from "./_modules/messages.js";
+import PlanetReporter from "./_components/planetReporter.js";
 
-a.hello();
-b.goodbye();
+messages.hello();
+
+customElements.define("planet-reporter", PlanetReporter);
