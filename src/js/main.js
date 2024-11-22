@@ -1,6 +1,8 @@
-import * as messages from "./_modules/messages.js";
-import PlanetReporter from "./_components/planetReporter.js";
+import messages from "./_modules/messages.js";
+import GitHubReporter from "./_components/gitHubReporter.js";
+import LoadingSpinner from "./_components/loadingSpinner.js";
 
 messages.hello();
 
-customElements.define("planet-reporter", PlanetReporter);
+customElements.define("github-reporter", GitHubReporter);
+customElements.define("loading-spinner", LoadingSpinner);

@@ -1,0 +1,13 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid > * {
+  width: calc(100% / 3);
+}
+
+.grid-item {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

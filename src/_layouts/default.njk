@@ -9,7 +9,7 @@
     {% else %}
       <link rel="preload" href="/css/style.css" as="style">
       <link rel="stylesheet" href="/css/style.css" media="all">
-    {% endif %}     
+    {% endif %}
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js','js');
     </script>
@@ -21,9 +21,9 @@
   <body>
     {% if (meta.env === 'production') %}
       {% include 'gTagManagerNoScript.njk' %}
-    {% endif %} 
+    {% endif %}
     {% include 'header.njk' %}
-    <main>
+    <main class="grid">
       {{ content | safe }}
     </main>
     {% include 'footer.njk' %}
