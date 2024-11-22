@@ -1,4 +1,4 @@
-import Api from "./api.js";
+import Api from "../_lib/api.js";
 import Reporter from "./reporter.js";
 
 const api = new Api({ uri: "https://api.github.com/repos/11ty/eleventy" });
