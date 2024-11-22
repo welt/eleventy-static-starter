@@ -15,7 +15,7 @@ describe("API helper handles args", () => {
           Promise.resolve({
             data: {
               name: "this is mocked data",
-              stargazers_count: 100,
+              stargazers_count: 999,
             },
           }),
       }),
